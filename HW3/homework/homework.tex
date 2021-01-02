@@ -1,0 +1,295 @@
+\documentclass[12pt]{article}
+\input{/Users/circle/Documents/博一上/homework/setting.tex}
+\setcounter{secnumdepth}{2}
+\usepackage{bm}
+\usepackage{autobreak}
+\usepackage{amsmath}
+\graphicspath{{fig/}}
+\setlength{\parindent}{2em}
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={Advanced Fluid Mechanics Homework 3}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{Advanced Fluid Mechanics Homework 3} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		College of Engineering \quad 2001111690  \quad 袁磊祺\\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+\input{setc.tex}
+
+\maketitle
+
+\section{1}
+
+在飞机参考系中,飞行中可用的净推力$ F_N $由两个动量通量之差得出,即
+\begin{equation}
+	F_{N}= \dot{m}_{\text {air}} V_{j}-\dot{m}_{\text {air}} V.
+\end{equation}
+其中 $\dot{m}_{\text {air}}$ 为单位时间进入的空气质量,$V_j = 650$m/s 为喷气速度,$V=222$m/s 为进气速度, 8000m 处的空气密度为$\rho = 5.25 \times 10^{-1} \mathrm{kg/m^3}$,
+\begin{equation}
+	\dot{m}_{\text {air}} = \frac{\pi D^2}{4} \times V \rho ,
+\end{equation}
+其中$D=0.86$m是进口截面直径,所以
+\begin{equation}
+	F_{N}= \frac{\pi D^2}{4} \times V \rho \left( V_{j}- V\right) = 2.90 \times 10^{4} \mathrm{N}.
+\end{equation}
+
+\section{2}
+
+\subsection{}
+
+空气密度$\rho = 1.29$kg/m³, 摩尔质量$\mu = 29 $g/mol,满足理想气体状态方程
+\begin{equation}
+	p = \frac{\rho R T}{\mu}
+\end{equation}
+设船和水之间的空气压强为$p_1$,大气压强为$p_0$,压力差
+\begin{equation}
+	F = (p_1-p_0)S = 98000 \mathrm{N},
+\end{equation}
+与重力平衡,其中$S = 3\times 10$m$^2$为软裙覆盖面积, 由伯努利方程,
+\begin{equation}
+	p_0 + \frac{1}{2}\rho v^2 = p_1,
+\end{equation}
+所以
+\begin{equation}
+	v = \sqrt{\frac{2F}{S\rho}} = 71 \si{\metre /\second}.
+\end{equation}
+气流量
+\begin{equation}
+	\dot{m} = v \rho h L = 71 \times 1.29 \times 0.02 \times 26 \mathrm{kg/s} = 47\mathrm{kg/s},
+\end{equation}
+其中$h=20\mathrm{mm}$是间隙,$L=2\times (3+10)\mathrm{m}=26\mathrm{m}$.
+
+
+
+\subsection{}
+
+\begin{equation}
+	P = \frac{1}{2}\rho v^2 L v =  \num{6.0e+06} \si{\watt} = \num{8.2e+03} \mathrm{hp} .
+\end{equation}
+
+\section{3}
+
+我觉得远处的星体对物体的影响可以忽略不计,旋转水桶使得水向下凹陷是因为时空的不对称性,宇宙是有边界的,所以不存在没有物体的完美空间.
+
+在一个远离各个星球（星球对物体对引力极小时）,存在一个坐标系,在这个坐标系里,互不影响的物体做匀速直线运动,这个坐标系就是惯性坐标系,任何相对其做匀速直线运动的坐标系都是惯性坐标系,而任何相对其做加速运动（包括旋转）的坐标系都是非惯性系.
+
+爱因斯坦的相对论并没有讨论把所有物体都去掉以后空间的行为.他谈论的是空间与时间的耦合（狭义相对论）,以及空间、时间、物质的耦合（广义相对论）.讨论的基础都是假设存在一个惯性系.
+
+
+\section{4}
+
+速度场分布
+\begin{equation}
+	\bm{v} = \nabla \times \left(\frac{1}{4\pi}\int_\tau \frac{\bm{\omega}(\xi,\eta ,\zeta )}{r} \dif \tau \right) = \frac{1}{4\pi} \nabla \times \oint_L \frac{\Gamma}{r} \dif \bm{l} = - \frac{\Gamma}{4\pi} \int_L \frac{\bm{r}\times \dif \bm{l}}{r^3}
+\end{equation}
+设$\bm{x_0}=(x_0,y_0,z_0)$处速度场势函数为$0$, 则
+\begin{equation}
+	\varphi(\bm{x}) = - \int_{\bm{x}_0}^{\bm{x}} \bm{v} \cdot \dif \bm{l} 
+\end{equation}
+$\bm{l}$沿着$\bm{x_0}$到$\bm{x}$的某一路径,由于速度场成环状,且圈住涡丝,所以势函数是多值的.$\varphi(\bm{x})$ 不同值的物理意义是：势函数的差为绕一圈后圈住的涡丝量乘以负环量$-\Gamma$.
+
+\section{5}
+
+设矢量线$\bm{x} = \bm{x}(s,t)$ 是一条物质线,$s$是定义矢量线的参数.在$t=0$时刻,它与涡线重合的充分必要条件是
+\begin{equation}
+	\pd{\bm{x}}{s} \times \bm{\omega} = 0 
+\end{equation}
+或
+\begin{equation}
+	\pd{\bm{x}}{s} = f\bm{\omega}\quad(t=0),
+	\label{eq:52}
+\end{equation}
+其中$f\not= 0$是一个标量.若涡线在$t>0$时仍与此武陟县相切,则必有
+\begin{equation}
+	\od{}{t}(\pd{\bm{x}}{s} \times \bm{\omega}) =0. 
+	\label{eq:51}
+\end{equation}
+利用物质线元的物质导数公式
+\begin{equation}
+	\od{}{t}(\dif \bm{x}) = \dif \bm{x} \cdot \nabla\bm{u} = \dif \bm{u},
+\end{equation}
+\cref{eq:51} 变为
+\begin{equation}
+	\od{}{ t}\left(\pd{ \bm{x}}{ s} \times \bm{\omega}\right)=\left(\pd{ \bm{x}}{ s} \cdot \nabla \bm{u}\right) \times \bm{\omega}+\pd{ \bm{x}}{ s} \times \od{ \bm{\omega}}{ t},
+	\label{eq:53}
+\end{equation}
+若涡线在$t>0$仍与$\bm{x}(s,t)$重合,可将\cref{eq:52}代入\cref{eq:53},得
+\begin{equation}
+	\od{}{ t}\left(\frac{\partial x}{\partial s} \times \omega\right)=f \omega \times\left(\od{ \omega}{ t}-\omega \cdot \nabla u\right)=f \omega \times(\nabla \times a),
+\end{equation}
+和\cref{eq:51} 相比,克制涡线是物质线的必要条件是
+\begin{equation}
+	\omega \times(\nabla \times a) =0.
+	\label{eq:54}
+\end{equation}
+反之,若成立,且在$t=0$时有\cref{eq:52},则$\pd{\bm{x}}{s} \times \bm{\omega}$总是0,所以\ref{eq:54}又是涡线为物质线的充分条件.\qed
+
+
+\section{6}
+
+\begin{equation}
+	\begin{aligned}
+	\frac{\dif H}{\dif t} &=\frac{\dif}{\dif t} \int_V \bm{u} \cdot \bm{\omega} \dif V \\
+	&=2\int _V (\nabla \times \bm{a}) \cdot \bm{u} \dif V
+	\end{aligned}
+\end{equation}
+在旋转参照系中,离心力有势,设刚体旋转角速度为$\bm{\Omega}$,
+\begin{equation}
+	\bm{a} = - \bm{u} \cdot \nabla \bm{u} - \nabla (h+\phi) - 2 \bm{\Omega} \times \bm{u},
+\end{equation}
+其中$h=\int \dif p/\rho,\ \phi$ 是体力势.
+\begin{equation}
+	\begin{aligned}
+		\frac{\dif H}{\dif t} &=-4\int _V (\nabla \times (\bm{\Omega} \times \bm{u}) \cdot \bm{u}) \dif V\\
+		&=-4 \bm{\Omega} \cdot \int _V (\nabla \bm{u}) \cdot \bm{u}+(\nabla \cdot \bm{u}) \bm{u} \dif V\\
+		&=-2 \bm{\Omega} \cdot \int _V \nabla \bm{u}^2 \dif V\\
+		&=-2 \bm{\Omega} \cdot \int_{\partial V} \bm{n} \bm{u}^2 \dif S\\
+		&=0.
+	\end{aligned}
+\end{equation}
+上式考虑到了$\bm{\Omega}$是常矢量,以及液体不可压,并且边界速度,边界法向涡量为$0$,并且用到了
+\begin{equation}
+	\nabla \times (\bm{a}\times \bm{b}) = (\bm{b} \cdot \nabla) \bm{a} - (\bm{a}\cdot\nabla)\bm{b}+\bm{a} \nabla \cdot \bm{b} - \bm{b} \nabla \cdot \bm{a}.
+\end{equation}
+
+\section{7}
+
+\begin{equation}
+	\frac{\dif \boldsymbol{I}_{\partial \mathcal{V}}}{\dif t}=\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\phi \boldsymbol{n} \dif S), \quad \frac{\dif \boldsymbol{L}_{\partial \mathcal{V}}}{\dif t}=\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\boldsymbol{x} \times \phi \boldsymbol{n} \dif S)
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\frac{\dif \boldsymbol{I}_{\partial \mathcal{V}}}{\dif t}=&\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\phi \boldsymbol{n} \dif S)\\
+		=&\int_{\partial \mathcal{V}} \phi\frac{\Dif}{\Dif t}( \boldsymbol{n} \dif S) + \int_{\partial \mathcal{V}} \boldsymbol{n} \dif S\frac{\Dif}{\Dif t}\phi \\
+		=&-\int_{\partial \mathcal{V}} \phi \bm{n} \cdot \nabla\nabla \phi \dif S + \int_{\partial \mathcal{V}} \boldsymbol{n} \dif S\frac{\Dif}{\Dif t}\phi \\
+		=&-\int_{ \mathcal{V}} \nabla \cdot (\phi \nabla\nabla \phi) \dif V  + \int_{ \mathcal{V}} \nabla \frac{\Dif}{\Dif t}\phi \dif V \\
+		=&-\int_{ \mathcal{V}} \phi \Delta \bm{u} +\nabla \frac{\bm{u}^2}{2} \dif V  + \int_{ \mathcal{V}} \frac{\partial \phi }{\partial t} + \nabla\bm{u}^2 \dif V \\
+		=& \int_{ \mathcal{V}} \frac{\partial \phi }{\partial t} + \frac{1}{2} \nabla\bm{u}^2 \dif V =- \frac{1}{\rho} \int_{ \mathcal{V}} \nabla p \dif V \\
+		=&- \frac{1}{\rho} \int_{\partial \mathcal{V}}  p \bm{n} \dif S \\
+	\end{aligned}
+\end{equation}
+
+上式在推导过程中没有考虑到远场是否为0.
+
+\section{8}
+
+\subsection{3.12}
+
+\begin{equation}
+	\frac{\dif \boldsymbol{I}_{\partial \mathcal{V}}}{\dif t}=\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\phi \boldsymbol{n} \dif S), \quad \frac{\dif \boldsymbol{L}_{\partial \mathcal{V}}}{\dif t}=\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\boldsymbol{x} \times \phi \boldsymbol{n} \dif S)
+\end{equation}
+
+
+\begin{equation}
+	\begin{aligned}
+		\frac{\dif \boldsymbol{I}_{\partial \mathcal{V}}}{\dif t}=&\int_{\partial \mathcal{V}} \frac{\Dif}{\Dif t}(\phi \boldsymbol{n} \dif S)\\
+		=&\int_{\partial \mathcal{V}} \phi\frac{\Dif}{\Dif t}( \boldsymbol{n} \dif S) + \int_{\partial \mathcal{V}} \boldsymbol{n} \dif S\frac{\Dif}{\Dif t}\phi \\
+		=&-\int_{\partial \mathcal{V}} \phi \bm{n} \cdot \nabla\nabla \phi \dif S + \int_{\partial \mathcal{V}} \boldsymbol{n} \dif S\frac{\Dif}{\Dif t}\phi \\
+		=&-\int_{ \mathcal{V}} \nabla \cdot (\phi \nabla\nabla \phi) \dif V  + \int_{ \mathcal{V}} \nabla \frac{\Dif}{\Dif t}\phi \dif V \\
+		=&-\int_{ \mathcal{V}} \phi \Delta \bm{u} +\nabla \frac{\bm{u}^2}{2} \dif V  + \int_{ \mathcal{V}} \frac{\partial \phi }{\partial t} + \nabla\bm{u}^2 \dif V \\
+		=& \int_{ \mathcal{V}} \frac{\partial \phi }{\partial t} + \frac{1}{2} \nabla\bm{u}^2 \dif V =- \frac{1}{\rho} \int_{ \mathcal{V}} \nabla p \dif V \\
+		=&- \frac{1}{\rho} \int_{\partial \mathcal{V}}  p \bm{n} \dif S \\
+	\end{aligned}
+\end{equation}
+
+\subsection{3.2}
+
+\subsubsection{(1)}
+
+反证法
+
+假设有两个解$\bm{u_1},\ \bm{u_2}$,
+\begin{gather}
+	\nabla \cdot \bm{u}_{1,2} = \theta,\\
+	\nabla \times \bm{u}_{1,2} = \bm{\omega},
+\end{gather}
+边界上,
+\begin{equation}
+	\bm{u}_{1} \cdot \bm{e}_n = \bm{u}_{2} \cdot \bm{e}_n,\quad  \text{或者}\quad \bm{u}_{1} \times \bm{e}_n = \bm{u}_{2} \times \bm{e}_n.
+\end{equation}
+设
+\begin{equation}
+	\bm{u} = \bm{u}_{1} - \bm{u}_{2},
+\end{equation}
+则
+\begin{gather}
+	\nabla \cdot \bm{u} = 0,\\
+	\nabla \times \bm{u} = 0.
+\end{gather}
+边界上,
+\begin{equation}
+	\bm{u}_{1} \cdot \bm{e}_n = 0,\quad  \text{或者}\quad \bm{u}_{2} \times \bm{e}_n = 0.
+\end{equation}
+因为
+\begin{equation}
+	\nabla \times \bm{u} = 0,
+\end{equation}
+所以
+\begin{equation}
+	\bm{u}=\nabla \phi.
+\end{equation}
+又因为
+\begin{equation}
+	\nabla \cdot \bm{u} = 0,
+\end{equation}
+所以
+\begin{equation}
+	\nabla^2 \phi = 0.
+\end{equation}
+\begin{enumerate}
+	\item 若$\bm{u} \cdot \bm{e}_n = 0$,则
+	\begin{equation}
+		\partial_n \phi = 0.
+	\end{equation}
+	\item 若$\bm{u} \times \bm{e}_n = 0$,则
+	\begin{equation}
+		\partial_t \phi = 0.
+	\end{equation}
+	即$\phi$为常数
+\end{enumerate}
+对以上两种情况,即为拉普拉斯方程的两种边界条件,由唯一性定理可知,解唯一,即$\phi$为常数,所以
+\begin{equation}
+	\bm{u} = \nabla \phi = 0.
+\end{equation}
+所以解唯一.\qed
+
+\subsubsection{(2)}
+
+对于无滑移和无穿透边界条件来说,速度在边界就是为0,按照上面的分析来看,全场速度为0,但是对于有粘度的流体来说,流体在边界有一个边界层,边界层涡量极大,和给定条件有所不同,所以边界条件不矛盾.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\nocite{*}
+
+\input{bib.tex}
+
+\end{document}
