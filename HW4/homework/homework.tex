@@ -52,15 +52,15 @@
 \end{equation}
 由几何关系可算得
 \begin{equation}
-	F = l\rho U d \cot \frac{\alpha}{2},
+	F = l\rho U^2 d \cot \frac{\alpha}{2},
 \end{equation}
 所以滑板受到的水的总的垂直向上的支持力
 \begin{equation}
-	N = F \cos \alpha = l\rho U d \cot \frac{\alpha}{2} \cos \alpha.
+	N = F \cos \alpha = l\rho U^2 d \cot \frac{\alpha}{2} \cos \alpha.
 \end{equation}
 单位宽度滑板受到的水的总的垂直向上的支持力
 \begin{equation}
-	N' = \rho U d \cot \frac{\alpha}{2} \cos \alpha.
+	N' = \rho U^2 d \cot \frac{\alpha}{2} \cos \alpha.
 \end{equation}
 
 \begin{figure}[htp]
@@ -81,7 +81,7 @@
 
 \subsection{(1)}
 
-设液体密度为$\rho$,假设半径相同处的流体的流速基本相同. 取半径为$r$的控制体, 控制体内流体的总质量守恒,
+设液体密度为$\rho$,假设半径相同处的流体的流速基本相同. 取半径为$r$的物质体, 物质体内流体的总质量守恒,
 \begin{equation}
 	0 = \dif \ (\rho h \pi r^2) = r^2\dif h + 2hr\dif r,
 \end{equation}
@@ -89,24 +89,24 @@
 \begin{equation}
 	v(r) = \frac{\dif r}{\dif t} = - \frac{r}{2h} \frac{\dif h}{\dif t} = \frac{Ur}{2h}.
 \end{equation}
-半径从$r$到$r+\Delta r$处的流体受到上下板的阻力近似为
+半径从$r$到$r+\Delta r$处的流体受到上下板的水平方向的阻力近似为
 \begin{equation}
-	\dif f(r) = \frac{v}{h} 2\pi r \dif r = \frac{\pi r^2U}{h^2}\dif r.
+	\dif f(r) = \frac{\mu v}{h} 2\pi r \dif r = \frac{\mu \pi r^2U}{h^2}\dif r.
 \end{equation}
-不考虑流体的惯性力, $r$到$r+\Delta r$的压力差和阻力相等
+不考虑流体的惯性力, $r$到$r+\Delta r$的水平方向压力差和水平阻力相等
 \begin{equation}
-	-2\pi rh\dif p(r) = \dif f(r) = \frac{\pi r^2U}{h^2}\dif r.
+	-2\pi rh\dif p(r) = \dif f(r) = \frac{\mu \pi r^2U}{h^2}\dif r.
 \end{equation}
 \begin{equation}
-	\dif p(r) = - \frac{rU}{2h^3}\dif r.
+	\dif p(r) = - \frac{\mu rU}{2h^3}\dif r.
 \end{equation}
 假设流体外部压强为0, 则
 \begin{equation}
-	p(r) = \frac{U}{4h^3}\left(R^2-r^2\right).
+	p(r) = \frac{\mu U}{4h^3}\left(R^2-r^2\right).
 \end{equation}
 所以平板受到的阻力为
 \begin{equation}
-	F = \int_0^R 2\pi r p(r) \dif r = \int_0^R 2\pi r \frac{U}{4h^3}\left(R^2-r^2\right) \dif r = \frac{\pi U R^4}{8h^3}.
+	F = \int_0^R 2\pi r p(r) \dif r = \int_0^R 2\pi r \frac{\mu U}{4h^3}\left(R^2-r^2\right) \dif r = \frac{\pi \mu U R^4}{8h^3}.
 \end{equation}
 
 
@@ -121,11 +121,22 @@
 
 \section{3}
 
+\subsection{当流动为层流}
+
 在考虑平板边界层时, 边界层是一个强剪切层, 当$\mathrm{Re}$趋于无穷时, 边界层就成为了面涡, 所以这里直接使用边界层厚度的结论
 \begin{equation}
 	\delta \approx \sqrt{\frac{\nu x}{U}} = \sqrt{\frac{x^2\rho}{\mathrm{Re}}},
 \end{equation}
 其中$x$是特征尺度, $U$是特征速度. 
+
+\subsection{当流动为湍流}
+\begin{equation}
+	\frac{\delta}{x}=0.37 \operatorname{Re}_{x}^{-1 / 5},
+\end{equation}
+其中
+\begin{equation}
+	\operatorname{Re}_x=\frac{U_{\infty} x}{\nu}.
+\end{equation}
 
 \section{4}
 
@@ -137,6 +148,7 @@
 \begin{equation}
 	\gamma = \bm{n} \times \nabla_\pi (\Gamma + \llbracket \phi_B \rrbracket) = \bm{n} \times \nabla_\pi \Gamma.
 \end{equation}
+
 
 \section{5}
 

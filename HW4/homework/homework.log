@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  2 JAN 2021 16:19
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  4 JAN 2021 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1368,12 +1368,12 @@ File: ../12.png Graphic file (type bmp)
 <../12.png>
  [1
 
-] [2] [3] [4]
-Overfull \hbox (40.76pt too wide) in paragraph at lines 219--220
+] [2] [3] [4] [5]
+Overfull \hbox (40.76pt too wide) in paragraph at lines 231--232
 []\TU/lmr/m/n/12 We apply standard discretization techniques to solve the $\OML/cmm/m/it/12 ^^N$\TU/lmr/m/n/12 -equations.Let $\OML/cmm/m/it/12 z[]$\TU/lmr/m/n/12 (t)=$\OML/cmm/m/it/12 x[]$\TU/lmr/m/n/12 (t)+$\OML/cmm/m/it/12 iy[]$\TU/lmr/m/n/12 (t)
  []
 
-[5]
+[6]
 File: ../0.00.pdf Graphic file (type pdf)
 <use ../0.00.pdf>
 File: ../0.01.pdf Graphic file (type pdf)
@@ -1396,7 +1396,7 @@ File: ../0.09.pdf Graphic file (type pdf)
 <use ../0.09.pdf>
  (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [6] [7] [8] [9]
+) [7] [8] [9]
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1420,23 +1420,23 @@ No file homework.bbl.
 Package caption Warning: Unused \captionsetup[table] on input line 3.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
 (./homework.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 421.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `homework.out' has not changed.
-(rerunfilecheck)             Checksum: 35BF802A7453DC60F509B290DC05E584;1484.
+(rerunfilecheck)             Checksum: 64B039178B3C0615A4EE20D3CA201EA6;1696.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 38238 strings out of 479418
- 764284 string characters out of 5884585
- 1456549 words of memory out of 5000000
- 54947 multiletter control sequences out of 15000+600000
+ 38239 strings out of 479418
+ 764295 string characters out of 5884585
+ 1508549 words of memory out of 5000000
+ 54948 multiletter control sequences out of 15000+600000
  544140 words of font info for 136 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,14n,83p,1266b,2359s stack positions out of 5000i,500n,10000p,200000b,80000s

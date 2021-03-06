@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\input{/Users/circle/Documents/博一上/homework/setting.tex}
+\setcounter{secnumdepth}{2}
+\usepackage{bm}
+\usepackage{autobreak}
+\usepackage{amsmath}
+\graphicspath{{../}}
+\setlength{\parindent}{2em}
+\newcommand{\bs}  [1]{\boldsymbol{#1}}
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={Advanced Fluid Mechanics 思考题}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{Advanced Fluid Mechanics 思考题} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		College of Engineering \quad 2001111690  \quad 袁磊祺\\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+\input{setc.tex}
+
+\maketitle
+
+\section{1}
+
+
+在无穷远处静止的流体参考系中，自由的涡流环由于其自身的运动而不能静止。 环形曲率使它的不同部分产生感应运动，这是一种运动机制，对于直的轴向旋涡来说是看不到的。 尽管这种自感应对于非轴对称环是不均匀的，例如\emph{Vortical Flows}图3.10，但对于轴对称环，所有单位弧长的元素都具有相同的贡献，从而导致$z$方向的均匀运动。
+
+又由于涡环可以看作是一个环形的涡管，假设流体是近似理想的，流体正压，体力有势，根据涡管保持定理，组成涡管的流体质点在以前或以后任一时刻也永远组成涡管。
+
+所以涡环带着涡管内的物质，以一速度向前运动，且由于涡环内质点在运动，所以涡环携带较大的能量和质量。又由于涡环的对称性，保证了涡环的稳定性，保证涡环能远距离传输。
+
+
+\section{3}
+
+瑞利-贝纳德对流（Rayleigh–Bénard convection）泛指一类自然对流，这类对流常常发生在从底部加热的一层流体表面上。发生对流的流体在表面形成的、具有规则形状的对流单体叫做贝纳德原胞（Bénard cell）。因为在理论研究和实验上并具可行性，瑞利-贝纳德对流是被研究得最多的对流现象之一，而对流形成的图案也成为了在自组织的非线性系统中被测试得最细的一个例子，在物理学以及大气科学中被广泛用于各种环流和对流现象的研究中。
+
+浮力和重力是形成瑞利-贝纳德对流的主要原因。位于底部的液体因为受热而密度较低，在其上浮过程中自发形成了规则的原胞图案。
+
+瑞利-贝纳德对流的特征可以通过法国物理学家亨利·贝纳德在1900年完成的一个简单实验来观察。
+
+\subsection{对流形成}
+
+实验利用了夹在两层平行板之间的一层液体（例如水）。首先，令上下两板的温度一致；夹在两板之间的液体会趋向热力学平衡；此平衡也是渐进稳定的。接着，稍稍升高底部的温度将导致热量通过液体向上传导；系统开始出现热传导的结构，线性的温度梯度被建立起来。此时，微观的无序运动会自发地在宏观尺度上变得有序，形成具有一定特征相关长度的贝纳德原胞。
+
+如果流体加热足够大（整个层的温度梯度更高），那么只有顶部重态就会变得不稳定，然后进行对流运动。
+
+
+\nocite{*}
+
+\input{bib.tex}
+
+\end{document}
